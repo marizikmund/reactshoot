@@ -1,5 +1,5 @@
 var AppDispatcher = require('../dispatcher/AppDispatcher');
-var appConstants = require('../constants/appConstants');
+var appConstants = require('../constants/AppConstants');
 var objectAssign = require('react/lib/Object.assign');
 var EventEmitter = require('events').EventEmitter;
 
@@ -20,7 +20,7 @@ var updateMe = function(me) {
 var MeStore  = objectAssign({}, EventEmitter.prototype, {
   getState: function(){
     return _state;
-  }, 
+  },
   getMe: function(){
     return _state.me;
   },
@@ -33,23 +33,23 @@ var MeStore  = objectAssign({}, EventEmitter.prototype, {
   addChangeListener: function(cb){
     this.on(CHANGE_EVENT, cb);
   },
-  removeChangeListener: function(cb){ 
+  removeChangeListener: function(cb){
     this.removeListener(CHANGE_EVENT, cb);
   }
 });
 
 AppDispatcher.register(function(payload){
-  var action = payload.action; 
+  var action = payload.action;
   switch(action.actionType){
     case appConstants.UPDATE_ME:
     if(typeof action.data !== 'object') {} else {
     	 updateMe(action.data);
       MeStore.emit(CHANGE_EVENT);
     }
-     
+
       break;
-     
-    
+
+
     default:
       return true
   };

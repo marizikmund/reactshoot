@@ -1,5 +1,5 @@
 var AppDispatcher = require('../dispatcher/AppDispatcher');
-var appConstants = require('../constants/appConstants');
+var appConstants = require('../constants/AppConstants');
 var objectAssign = require('react/lib/Object.assign');
 var EventEmitter = require('events').EventEmitter;
 
@@ -41,7 +41,7 @@ AppDispatcher.register(function(payload){
       addShot(action.data);
       ShotsStore.emit(CHANGE_EVENT);
       break;
-    
+
     default:
       return true
   };

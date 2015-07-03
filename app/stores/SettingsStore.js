@@ -1,5 +1,5 @@
 var AppDispatcher = require('../dispatcher/AppDispatcher');
-var appConstants = require('../constants/appConstants');
+var appConstants = require('../constants/AppConstants');
 var objectAssign = require('react/lib/Object.assign');
 var EventEmitter = require('events').EventEmitter;
 
@@ -39,7 +39,7 @@ var SettingsStore  = objectAssign({}, EventEmitter.prototype, {
   addChangeListener: function(cb){
     this.on(CHANGE_EVENT, cb);
   },
-  removeChangeListener: function(cb){ 
+  removeChangeListener: function(cb){
     this.removeListener(CHANGE_EVENT, cb);
   }
 });
@@ -57,7 +57,7 @@ var SettingsStore  = objectAssign({}, EventEmitter.prototype, {
       console.log('odebrán enemy ve storu',action.data);
       EnemiesStore.emit(CHANGE_EVENT);
       break;
-    
+
     default:
       return true
   };
