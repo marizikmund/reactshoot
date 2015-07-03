@@ -65,7 +65,7 @@ var Home = React.createClass({
           </div>
           <div className="container text-center" style={{ paddingTop: 30, paddingBottom: 40}}>
             <h3 className="text-center">Want to learn these technologies?</h3>
-            <br /><button className="btn btn-primary">View the code on Github</button>
+            <br /><a className="btn btn-primary" href="https://github.com/marizikmund/reactshoot">View the code on Github</a>
           </div>
           <div className="container text-center" style={{ paddingTop: 30, paddingBottom: 40}}>
             <br />There are definitely many possibilities for improving the game (graphics, rewriting all to HTML Canvas for faster rendering, optimization of algorithms...). If you had any other idea, feel free to contact me.

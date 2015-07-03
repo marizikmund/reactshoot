@@ -32,7 +32,7 @@ var Main = React.createClass({
           <RouteHandler openGame={this.openGame} nickname={this.state.nickname} setNickname={this.setNickname} />
         </div>
           <div className="container" style={{paddingBottom: 20, marginTop: 40}}>
-              <span className="pull-right">View the source code on Github.</span>
+              <a className="pull-right" href="https://github.com/marizikmund/reactshoot">View the source code on Github.</a>
           </div>
       </div>
     )
