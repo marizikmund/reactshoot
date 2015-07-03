@@ -1,5 +1,5 @@
 var Firebase = require('firebase');
-var appConstants = require('../constants/appConstants');
+var appConstants = require('../constants/AppConstants');
 
 var firebaseUtils = {
   homeInstance: function(){
